@@ -15,12 +15,7 @@ public class LearnPartialLinkText {
 		driver.get("https://login.salesforce.com/");
 		//driver.findElement(By.linkText("Forgot Your Password?")).click();
 		driver.findElement(By.partialLinkText("Forgot")).click();
-		
-		
-		
-		
-		
-		
+	
 
 	}
 

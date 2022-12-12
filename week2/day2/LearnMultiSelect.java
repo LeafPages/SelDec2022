@@ -22,11 +22,7 @@ public class LearnMultiSelect {
 		
 		
 		//To deSelect a value from dropdown
-		dd.deselectByVisibleText("England");
-		
-		
-		
-		
+		dd.deselectByVisibleText("England");	
 		
 
 	}

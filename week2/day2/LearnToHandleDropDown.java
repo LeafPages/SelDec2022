@@ -59,67 +59,7 @@ public class LearnToHandleDropDown {
 		//select using index -> Index always starts with 0
 		WebElement eleOwnership = driver.findElement(By.id("createLeadForm_ownershipEnumId"));
 		Select dropDown3 = new Select(eleOwnership);
-		dropDown3.selectByIndex(3);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		dropDown3.selectByIndex(3);	
 		
 
 	}

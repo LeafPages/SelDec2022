@@ -36,55 +36,6 @@ public class CreateLeadUsingXpath {
 		//to click on hyper link
 		driver.findElement(By.xpath("//a[contains(text(),'CRM')]")).click(); // partial textbased xpath //a[contains(text(),'CRM')]
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 
 	}
 

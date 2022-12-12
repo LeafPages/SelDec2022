@@ -47,18 +47,6 @@ public class SalesforceLogin {
 		//to close all the windows / tabs opened by selenium webdriver
 		//driver.quit();
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 
 	}
 
