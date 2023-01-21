@@ -1,0 +1,9 @@
+<suite name="LeafTaps_Testcases">
+	<test thread-count = "3" name="leads" parallel = "classes" verbose="5">
+		<classes>
+			<class name="testcase.CreateLead"></class>
+			<class name="testcase.EditLead"></class>
+			<class name="testcase.DeleteLead"></class>
+		</classes>
+	</test>
+</suite>
