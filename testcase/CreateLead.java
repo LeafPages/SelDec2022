@@ -1,30 +1,43 @@
 package testcase;
 
-import java.time.Duration;
+import java.io.IOException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
-@Test
 public class CreateLead extends BaseClass {
-
-	
-	public void runCreateLead() {
-		
-		driver.findElement(By.linkText("Create Lead123")).click();
-		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("TestLeaf");
-		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Hari");
-		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("R");
+	@Test(dataProvider = "fetchData")
+	public void runCreateLead(String company, String firstName, String lastName) {
+		driver.findElement(By.linkText("Create Lead")).click();
+		driver.findElement(By.id("createLeadForm_companyName")).sendKeys(company);
+		driver.findElement(By.id("createLeadForm_firstName")).sendKeys(firstName);
+		driver.findElement(By.id("createLeadForm_lastName")).sendKeys(lastName);
 		driver.findElement(By.name("submitButton")).click();
+
+	}
+	
+	
+	@DataProvider(name = "fetchData")
+	public String[][] sendData() throws IOException {
 		
-}
+			return ReadExcelData.readData();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
-
-
-
-
-
-

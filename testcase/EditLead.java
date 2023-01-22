@@ -1,16 +1,13 @@
 package testcase;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 
 
 public class EditLead extends BaseClass{
-
-	@Test
+							//packageName.ClassName.methodName
+	@Test(dependsOnMethods = "testcase.CreateLead.runCreateLead")
 	public  void runEditLead() throws InterruptedException {
 			
 		driver.findElement(By.linkText("Find Leads")).click();

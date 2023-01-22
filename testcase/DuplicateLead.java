@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class DuplicateLead {
 
-	@Test
+	@Test(enabled=false)
 	public void runDuplicate() throws InterruptedException {
 		
 		ChromeDriver driver = new ChromeDriver();

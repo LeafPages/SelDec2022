@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class DeleteLead {
 
-	@Test
+	@Test(dependsOnMethods = {"testcase.CreateLead.runCreateLead", "testcase.EditLead.runEditLead"})
 	public void runDeleteLead() throws InterruptedException {
 		
 		ChromeDriver driver = new ChromeDriver();
