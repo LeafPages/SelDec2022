@@ -7,9 +7,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadExcelData {
 	
-	public static String[][] readData() throws IOException {
+	public static String[][] readData(String fileName) throws IOException {
 	//Step1: Identify the workbook ./ -> represents the root folder of my project
-	XSSFWorkbook wb = new XSSFWorkbook("./data/CreateLead.xlsx");
+	XSSFWorkbook wb = new XSSFWorkbook("./data/"+fileName+".xlsx");
 	
 	//step2: Identify the WorkSheet
 	XSSFSheet ws = wb.getSheet("Sheet1"); //pass the sheet name

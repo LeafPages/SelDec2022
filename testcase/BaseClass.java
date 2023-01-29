@@ -1,15 +1,27 @@
 package testcase;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
 public class BaseClass {
 	public ChromeDriver driver;
+	public String excelFileName; //initial value is null
+	
+	@DataProvider(name = "fetchData",indices = 1)
+	public String[][] sendData() throws IOException {
+			return ReadExcelData.readData(excelFileName);
+		
+	}
+	
+	
+	
 	/*
 	 * order of the parameter can be anything
 	 * parameter name should be exactly matching with name in the testng.xml
@@ -37,5 +49,18 @@ public class BaseClass {
 		driver.close();
 
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

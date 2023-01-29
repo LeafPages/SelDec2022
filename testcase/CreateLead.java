@@ -3,11 +3,21 @@ package testcase;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
 public class CreateLead extends BaseClass {
+	
+	@BeforeTest
+	public void setValue() {
+		excelFileName = "CreateLead";
+	}
+	
+	
 	@Test(dataProvider = "fetchData")
 	public void runCreateLead(String company, String firstName, String lastName) {
 		driver.findElement(By.linkText("Create Lead")).click();
@@ -19,12 +29,7 @@ public class CreateLead extends BaseClass {
 	}
 	
 	
-	@DataProvider(name = "fetchData")
-	public String[][] sendData() throws IOException {
-		
-			return ReadExcelData.readData();
-		
-	}
+	
 	
 	
 	
